@@ -7,7 +7,7 @@
 # 第一階段：編譯 (Build Stage)
 #
 FROM maven:3.8.6-eclipse-temurin-8 AS build
-WORKDIR /app
+WORKDIR /demo
 
 # 複製所有原始碼與 maven wrapper 到容器內
 COPY . ./
