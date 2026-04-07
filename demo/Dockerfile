@@ -13,7 +13,7 @@ WORKDIR /demo
 COPY . ./
 
 # 執行編譯與打包
-RUN mvn clean package -DskipTests
+RUN mvn clean package -DskipTests -X
 
 #
 # 第二階段：執行 (Run Stage)
