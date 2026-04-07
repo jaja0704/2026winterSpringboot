@@ -17,5 +17,5 @@ RUN mvn clean package -DskipTests
 #
 FROM eclipse-temurin:8-jre
 EXPOSE 8080
-COPY --from=build /home/app/target/keelungsights.jar keelungsights.jar
-ENTRYPOINT ["java","-jar","keelungsights.jar"]
+COPY --from=build /home/app/target/0.0.1-SNAPSHOT.jar 0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","0.0.1-SNAPSHOT.jar"]
