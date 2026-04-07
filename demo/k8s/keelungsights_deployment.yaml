@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: keelungsights-deployment
+spec:
+  selector:
+    matchLabels:
+      app: keelungsights
+  template:
+    metadata:
+      labels:
+        app: keelungsights
+    spec:
+      containers:
+      - name: keelungsights
+        image: jaja0704/keelungsights:IT
+
+        resources:
+
+        env:
+        - name: SPRING_MONGODB_URI
+          value: "mongodb+srv://admin:jaja121605@cluster0.v2ie0ej.mongodb.net/?appName=Cluster0"
+        
+        - name: SPRING_MONGODB_DATABASE
+          value: "place"
+
+        ports:
+        - containerPort: 8080
+          name: keelungsights
