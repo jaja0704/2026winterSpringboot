@@ -13,7 +13,7 @@ WORKDIR /app
 COPY . ./
 
 # 執行編譯與打包
-RUN ./mvnw clean package -DskipTests
+RUN mvn clean package -DskipTests
 
 #
 # 第二階段：執行 (Run Stage)
