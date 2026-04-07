@@ -19,7 +19,7 @@ RUN mvn clean package -DskipTests
 # 第二階段：執行 (Run Stage)
 #
 FROM eclipse-temurin:21-jre-alpine
-WORKDIR /app
+WORKDIR /demo
 
 # 從第一階段把 0.0.1-SNAPSHOT.jar 拿過來，並重新命名為 app.jar
 COPY --from=build /app/target/0.0.1-SNAPSHOT.jar app.jar
